@@ -6,18 +6,23 @@ import android.support.v4.view.ViewPager;
 
 public class MainActivity extends FragmentActivity {
 
-    // representing an object in the collection.
     MyViewPagerAdapter myViewPagerAdapter;
-    ViewPager mViewPager;
+    SecViewPagerAdapter mSecViewPagerAdapter;
+    ViewPager mViewPager, mViewPager2;
+
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // ViewPager and its adapters use support library
-        // fragments, so use getSupportFragmentManager.
+
         myViewPagerAdapter = new MyViewPagerAdapter(getSupportFragmentManager());
         mViewPager = (ViewPager) findViewById(R.id.my_viewpager);
         mViewPager.setAdapter(myViewPagerAdapter);
+
+        mSecViewPagerAdapter = new SecViewPagerAdapter(getSupportFragmentManager());
+        mViewPager2 = (ViewPager) findViewById(R.id.my_viewpager1);
+        mViewPager2.setAdapter(mSecViewPagerAdapter);
     }
 
 }

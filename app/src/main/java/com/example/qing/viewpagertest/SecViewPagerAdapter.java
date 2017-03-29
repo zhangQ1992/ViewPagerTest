@@ -8,14 +8,14 @@ import android.support.v4.app.FragmentPagerAdapter;
  * Created by qing on 17-3-21.
  */
 
-public class MyViewPagerAdapter extends FragmentPagerAdapter {
-    public MyViewPagerAdapter(FragmentManager fm) {
+public class SecViewPagerAdapter extends FragmentPagerAdapter {
+    public SecViewPagerAdapter(FragmentManager fm) {
         super(fm);
     }
 
     @Override
     public Fragment getItem(int i) {
-        Fragment fragment = new MyFragment(i);
+        Fragment fragment = new SecFragment(i);
 
         return fragment;
 
